@@ -1,3 +1,559 @@
+Could you fix my html? 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Merry Christmas!</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: #102b24;
+  color: #f6ead5;
+  font-family: 'Cormorant Garamond', serif;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: .12;
+  background-image: radial-gradient(#fff 1px, transparent 1px);
+  background-size: 35px 35px;
+}
+
+header {
+  text-align: center;
+  padding: 55px 20px 15px;
+}
+
+.subtitle {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 12px;
+  color: #d8b985;
+}
+
+h1 {
+  font-size: clamp(38px, 7vw, 68px);
+  font-weight: 500;
+  margin: 12px 0;
+}
+
+header p {
+  font-size: 19px;
+  color: #d6c7b0;
+}
+
+.scene {
+  min-height: 620px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.tree {
+  position: absolute;
+  top: 35px;
+  font-size: clamp(220px, 38vw, 370px);
+  line-height: 1;
+  filter: drop-shadow(0 10px 15px #0005);
+  user-select: none;
+}
+
+.star {
+  position: absolute;
+  top: 8px;
+  font-size: 45px;
+  color: #e8c77c;
+  animation: glow 2s infinite alternate;
+  z-index: 2;
+}
+
+@keyframes glow {
+  from { filter: brightness(.8); }
+  to { filter: brightness(1.6) drop-shadow(0 0 12px gold); }
+}
+
+.gifts {
+  position: absolute;
+  bottom: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  flex-wrap: wrap;
+  gap: 15px;
+  width: min(95%, 700px);
+  z-index: 3;
+}
+
+.gift {
+  width: 105px;
+  height: 95px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: transform .3s;
+  background: transparent;
+}
+
+.gift:hover {
+  transform: translateY(-12px) rotate(-3deg);
+}
+
+.gift-box {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 76px;
+  border-radius: 3px;
+  box-shadow: 0 7px 10px #0005;
+}
+
+.gift-box::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 100%;
+  left: 44px;
+  background: #e9c47c;
+}
+
+.gift-box::after {
+  content: "✦";
+  position: absolute;
+  top: 24px;
+  left: 42px;
+  font-size: 20px;
+  color: #fff1d4;
+}
+
+.lid {
+  position: absolute;
+  top: 12px;
+  left: -4px;
+  width: 113px;
+  height: 20px;
+  border-radius: 3px;
+  z-index: 2;
+  background: inherit;
+}
+
+.bow {
+  position: absolute;
+  top: -3px;
+  left: 40px;
+  z-index: 3;
+  font-size: 25px;
+  color: #e9c47c;
+}
+
+.gift:nth-child(1) .gift-box,
+.gift:nth-child(1) .lid { background: #9f3442; }
+
+.gift:nth-child(2) .gift-box,
+.gift:nth-child(2) .lid { background: #d2aa65; }
+
+.gift:nth-child(3) .gift-box,
+.gift:nth-child(3) .lid { background: #315b47; }
+
+.gift:nth-child(4) .gift-box,
+.gift:nth-child(4) .lid { background: #a85c39; }
+
+.gift:nth-child(5) .gift-box,
+.gift:nth-child(5) .lid { background: #72537e; }
+
+.gift-label {
+  position: absolute;
+  bottom: -24px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  color: #f4dfbd;
+  white-space: nowrap;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #bca98e;
+  letter-spacing: 2px;
+  font-size: 13px;
+}
+
+/* MODAL */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: #061711df;
+  z-index: 10;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.overlay.active {
+  display: flex;
+}
+
+.modal {
+  background: #f4ead9;
+  color: #48382c;
+  padding: 40px 30px;
+  width: min(100%, 430px);
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 15px 70px #0008;
+  animation: appear .4s ease;
+  position: relative;
+}
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(20px) scale(.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.modal-icon {
+  font-size: 45px;
+  margin-bottom: 15px;
+}
+
+.modal h2 {
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.modal p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 13px;
+  background: transparent;
+  border: 1px solid #bca78c;
+  text-align: center;
+  font-family: inherit;
+  font-size: 19px;
+  outline: none;
+  margin-bottom: 15px;
+  color: #48382c;
+}
+
+.action {
+  border: none;
+  background: #234b3b;
+  color: white;
+  padding: 12px 28px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 18px;
+  transition: .2s;
+}
+
+.action:hover {
+  background: #37634e;
+}
+
+.close {
+  position: absolute;
+  top: 12px;
+  right: 17px;
+  border: none;
+  background: none;
+  font-size: 25px;
+  cursor: pointer;
+  color: #705c48;
+}
+
+.error {
+  color: #a32e38;
+  font-size: 15px;
+  min-height: 20px;
+}
+
+/* LETTER */
+
+.letter {
+  width: min(100%, 650px);
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 45px;
+  background: #f5ead5;
+  color: #49382b;
+  box-shadow: 0 15px 80px #0009;
+  animation: appear .7s ease;
+  position: relative;
+}
+
+.letter h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 43px;
+  font-weight: normal;
+  text-align: center;
+  margin: 15px 0 25px;
+}
+
+.letter .date {
+  text-align: right;
+  color: #947b5d;
+  font-style: italic;
+}
+
+.letter-content {
+  font-size: 20px;
+  line-height: 1.8;
+  white-space: pre-wrap;
+}
+
+.signature {
+  font-family: 'Great Vibes', cursive;
+  font-size: 32px;
+  margin-top: 30px;
+  text-align: right;
+}
+
+@media(max-width: 500px) {
+  .scene { min-height: 580px; }
+  .tree { top: 90px; font-size: 240px; }
+  .gifts { gap: 9px; bottom: 55px; }
+  .gift { width: 82px; height: 85px; }
+  .gift-box { height: 65px; }
+  .gift-box::before { left: 34px; }
+  .gift-box::after { left: 32px; }
+  .lid { width: 90px; }
+  .bow { left: 31px; }
+  .letter { padding: 35px 23px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="subtitle">A little something for you</div>
+  <h1>Merry Christmas ♡</h1>
+  <p>Some gifts are meant to be opened with a little love.</p>
+</header>
+
+<main class="scene">
+  <div class="star">✦</div>
+  <div class="tree">🎄</div>
+
+  <div class="gifts" id="gifts"></div>
+</main>
+
+<footer>
+  MADE WITH LOVE · CHRISTMAS 2026
+</footer>
+
+<!-- PASSWORD MODAL -->
+<div class="overlay" id="passwordModal">
+  <div class="modal">
+    <button class="close" onclick="closeModal()">×</button>
+    <div class="modal-icon">🎁</div>
+    <h2>A little surprise...</h2>
+    <p>This present is waiting for its special passcode.</p>
+    <input id="password" type="password"
+      placeholder="Enter your passcode">
+    <div class="error" id="error"></div>
+    <button class="action" onclick="unlockGift()">Open present ♡</button>
+  </div>
+</div>
+
+<!-- LETTER MODAL -->
+<div class="overlay" id="letterModal">
+  <div class="letter">
+    <button class="close" onclick="closeLetter()">×</button>
+    <div class="date" id="letterDate"></div>
+    <h2 id="letterTitle"></h2>
+    <div class="letter-content" id="letterContent"></div>
+    <div class="signature" id="letterSignature"></div>
+  </div>
+</div>
+
+<script>
+
+// ======================================
+// PERSONALIZE YOUR GIFTS HERE
+// ======================================
+
+const gifts = [
+  {
+    name: "For you",
+    password: "1234",
+    title: "A little reminder ♡",
+    date: "December 25, 2026",
+    message: `Dear you,
+
+Write your first personal letter here.
+
+You can make this as long as you like.
+Every word will appear inside this little present.
+
+With love.`,
+    signature: "Always yours ♡"
+  },
+  {
+    name: "A memory",
+    password: "memory",
+    title: "Remember when...",
+    date: "December 25, 2026",
+    message: `Dear you,
+
+Write your second letter here.
+
+Maybe a favorite memory, a story, or
+something you want them to remember.
+
+I hope this makes you smile.`,
+    signature: "With love ♡"
+  },
+  {
+    name: "Something special",
+    password: "love",
+    title: "Something I want you to know",
+    date: "December 25, 2026",
+    message: `Dear you,
+
+Write your third letter here.
+
+This space is yours to fill with anything
+you want to say.`,
+    signature: "Forever ♡"
+  },
+  {
+    name: "Just because",
+    password: "gift4",
+    title: "Just because...",
+    date: "December 25, 2026",
+    message: `Dear you,
+
+Your fourth letter goes here.`,
+    signature: "Yours ♡"
+  },
+  {
+    name: "One last thing",
+    password: "gift5",
+    title: "One last little surprise",
+    date: "December 25, 2026",
+    message: `Dear you,
+
+Your final letter goes here.`,
+    signature: "Merry Christmas ♡"
+  }
+];
+
+let selectedGift = null;
+
+// CREATE PRESENTS
+
+const giftContainer = document.getElementById("gifts");
+
+gifts.forEach((gift, index) => {
+  const button = document.createElement("button");
+  button.className = "gift";
+  button.innerHTML = `
+    <span class="bow">🎀</span>
+    <span class="lid"></span>
+    <span class="gift-box"></span>
+    <span class="gift-label">${gift.name}</span>
+  `;
+
+  button.onclick = () => openGift(index);
+  giftContainer.appendChild(button);
+});
+
+// OPEN A GIFT
+
+function openGift(index) {
+  selectedGift = gifts[index];
+
+  document.getElementById("password").value = "";
+  document.getElementById("error").textContent = "";
+
+  document.getElementById("passwordModal")
+    .classList.add("active");
+
+  setTimeout(() => {
+    document.getElementById("password").focus();
+  }, 100);
+}
+
+// CHECK PASSWORD
+
+function unlockGift() {
+  const entered = document.getElementById("password").value;
+
+  if (entered === selectedGift.password) {
+    document.getElementById("passwordModal")
+      .classList.remove("active");
+
+    document.getElementById("letterTitle").textContent =
+      selectedGift.title;
+
+    document.getElementById("letterDate").textContent =
+      selectedGift.date;
+
+    document.getElementById("letterContent").textContent =
+      selectedGift.message;
+
+    document.getElementById("letterSignature").textContent =
+      selectedGift.signature;
+
+    setTimeout(() => {
+      document.getElementById("letterModal")
+        .classList.add("active");
+    }, 350);
+
+  } else {
+    document.getElementById("error").textContent =
+      "Oops! That's not quite right. Try again ♡";
+  }
+}
+
+// CLOSE WINDOWS
+
+function closeModal() {
+  document.getElementById("passwordModal")
+    .classList.remove("active");
+}
+
+function closeLetter() {
+  document.getElementById("letterModal")
+    .classList.remove("active");
+}
+
+// ENTER KEY SUPPORT
+
+document.getElementById("password").addEventListener(
+  "keydown", event => {
+    if (event.key === "Enter") unlockGift();
+  }
+);
+
+</script>
+
+  
 <main class="cabin">
 
   <!-- LOG CABIN WALLS -->
@@ -24,7 +580,46 @@
 
   <!-- CHRISTMAS TREE -->
   <div class="tree-area">
-    ...
+
+    <div class="tree-star">✦</div>
+
+    <div class="christmas-tree">
+      <div class="tree-tier tier-one"></div>
+      <div class="tree-tier tier-two"></div>
+      <div class="tree-tier tier-three"></div>
+      <div class="tree-trunk"></div>
+
+      <!-- TREE LIGHTS -->
+      <div class="tree-lights">
+        <span>●</span><span>●</span><span>●</span>
+        <span>●</span><span>●</span><span>●</span>
+        <span>●</span><span>●</span><span>●</span>
+        <span>●</span><span>●</span><span>●</span>
+      </div>
+
+      <!-- ORNAMENTS -->
+      <div class="ornaments">
+        <span>●</span><span>●</span><span>●</span>
+        <span>●</span><span>●</span><span>●</span>
+        <span>●</span><span>●</span><span>●</span>
+      </div>
+    </div>
+
+    <!-- YOUR FIVE GIFTS -->
+    <div class="gifts" id="gifts"></div>
+
   </div>
 
+  <!-- WOODEN FLOOR -->
+  <div class="cabin-floor"></div>
+
+  <!-- SNOW -->
+  <div class="snow"></div>
+
+  <!-- WARM LIGHT OVERLAY -->
+  <div class="cabin-light"></div>
+
 </main>
+
+</body>
+</html>
