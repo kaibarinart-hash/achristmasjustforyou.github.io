@@ -61,18 +61,6 @@
   box-shadow: 0 0 5px #fff8;
 }
 
-/* LITTLE CHRISTMAS STAR */
-
-.gift-box::after {
-  content: "✧";
-  position: absolute;
-  top: 27px;
-  left: 45px;
-  font-size: 22px;
-  color: #fffdf4;
-  text-shadow: 0 1px 5px #b69c6a88;
-}
-
 /* GIFT LID */
 
 .lid {
