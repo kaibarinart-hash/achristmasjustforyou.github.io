@@ -525,3 +525,50 @@ body {
 .snow {
   z-index: 7;
 }
+
+
+/* TREE AREA */
+.tree-area {
+    position: absolute;
+    left: 50%;
+    bottom: 60px;
+    transform: translateX(-50%);
+    width: 340px;
+    height: 480px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: 3;
+}
+
+/* CHRISTMAS TREE */
+.christmas-tree {
+    position: absolute;
+    bottom: 110px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 280px;
+    height: 340px;
+}
+
+/* TREE LAYERS */
+.tree-tier {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: solid transparent;
+    border-right: solid transparent;
+    border-bottom: solid #244d38;
+}
+
+.tree-trunk {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 45px;
+    height: 65px;
+    background: #70452e;
+}
