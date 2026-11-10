@@ -8,6 +8,10 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
 
+
+/* =====================================
+   COZY WHITE CHRISTMAS THEME
+===================================== */
 <style>
 * {
   box-sizing: border-box;
@@ -17,44 +21,60 @@
 
 body {
   min-height: 100vh;
-  background: #102b24;
-  color: #f6ead5;
+  background:
+    radial-gradient(ellipse at top, #ffffff 0%, transparent 65%),
+    linear-gradient(180deg, #f8f5ef, #eee9df);
+  color: #766650;
   font-family: 'Cormorant Garamond', serif;
   overflow-x: hidden;
 }
+
+/* SOFT SNOWY BACKGROUND */
 
 body::before {
   content: "";
   position: fixed;
   inset: 0;
   pointer-events: none;
-  opacity: .12;
-  background-image: radial-gradient(#fff 1px, transparent 1px);
-  background-size: 35px 35px;
+  opacity: .45;
+  background-image:
+    radial-gradient(#ffffff 1.5px, transparent 1.5px),
+    radial-gradient(#d9cdbb 1px, transparent 1px);
+  background-size: 45px 45px, 75px 75px;
+  background-position: 0 0, 20px 25px;
+  z-index: 0;
 }
+
+/* HEADER */
 
 header {
   text-align: center;
   padding: 55px 20px 15px;
+  position: relative;
+  z-index: 1;
 }
 
 .subtitle {
   text-transform: uppercase;
   letter-spacing: 5px;
   font-size: 12px;
-  color: #d8b985;
+  color: #b69b70;
 }
 
 h1 {
   font-size: clamp(38px, 7vw, 68px);
   font-weight: 500;
   margin: 12px 0;
+  color: #9d8768;
+  text-shadow: 0 2px 15px #ffffff;
 }
 
 header p {
   font-size: 19px;
-  color: #d6c7b0;
+  color: #a99984;
 }
+
+/* CHRISTMAS SCENE */
 
 .scene {
   min-height: 620px;
@@ -63,30 +83,45 @@ header p {
   justify-content: center;
   align-items: center;
   padding: 20px;
+  z-index: 1;
 }
+
+/* TREE */
 
 .tree {
   position: absolute;
   top: 35px;
   font-size: clamp(220px, 38vw, 370px);
   line-height: 1;
-  filter: drop-shadow(0 10px 15px #0005);
+  filter:
+    drop-shadow(0 12px 12px #8b806633)
+    brightness(1.13);
   user-select: none;
 }
+
+/* STAR */
 
 .star {
   position: absolute;
   top: 8px;
   font-size: 45px;
-  color: #e8c77c;
+  color: #d5b779;
   animation: glow 2s infinite alternate;
   z-index: 2;
 }
 
 @keyframes glow {
-  from { filter: brightness(.8); }
-  to { filter: brightness(1.6) drop-shadow(0 0 12px gold); }
+  from {
+    filter: brightness(.9);
+    opacity: .8;
+  }
+  to {
+    filter: brightness(1.5) drop-shadow(0 0 12px #e5cb91);
+    opacity: 1;
+  }
 }
+
+/* PRESENTS */
 
 .gifts {
   position: absolute;
@@ -106,13 +141,16 @@ header p {
   border: none;
   cursor: pointer;
   position: relative;
-  transition: transform .3s;
+  transition: transform .4s ease, filter .4s ease;
   background: transparent;
 }
 
 .gift:hover {
-  transform: translateY(-12px) rotate(-3deg);
+  transform: translateY(-13px) rotate(-3deg);
+  filter: drop-shadow(0 10px 12px #a9946b55);
 }
+
+/* BOX */
 
 .gift-box {
   position: absolute;
@@ -120,9 +158,13 @@ header p {
   left: 0;
   width: 100%;
   height: 76px;
-  border-radius: 3px;
-  box-shadow: 0 7px 10px #0005;
+  border-radius: 4px;
+  box-shadow:
+    0 7px 15px #8c795522,
+    inset 0 1px 5px #ffffff99;
 }
+
+/* GOLD RIBBON */
 
 .gift-box::before {
   content: "";
@@ -130,17 +172,27 @@ header p {
   width: 15px;
   height: 100%;
   left: 44px;
-  background: #e9c47c;
+  background: linear-gradient(
+    90deg,
+    #c6a66f,
+    #fff1cc,
+    #d2b783
+  );
 }
 
+/* STAR ON PRESENT */
+
 .gift-box::after {
-  content: "✦";
+  content: "✧";
   position: absolute;
   top: 24px;
   left: 42px;
-  font-size: 20px;
-  color: #fff1d4;
+  font-size: 21px;
+  color: #fffdf5;
+  text-shadow: 0 1px 5px #c5a66d;
 }
+
+/* LID */
 
 .lid {
   position: absolute;
@@ -148,10 +200,12 @@ header p {
   left: -4px;
   width: 113px;
   height: 20px;
-  border-radius: 3px;
+  border-radius: 4px;
   z-index: 2;
-  background: inherit;
+  box-shadow: 0 3px 6px #8c795522;
 }
+
+/* BOW */
 
 .bow {
   position: absolute;
@@ -159,23 +213,46 @@ header p {
   left: 40px;
   z-index: 3;
   font-size: 25px;
-  color: #e9c47c;
+  color: #d7b77e;
+  filter: drop-shadow(0 2px 2px #9e875533);
 }
 
+/* PEARL WHITE */
+
 .gift:nth-child(1) .gift-box,
-.gift:nth-child(1) .lid { background: #9f3442; }
+.gift:nth-child(1) .lid {
+  background: linear-gradient(135deg, #fffefa, #e8e1d6);
+}
+
+/* WINTER IVORY */
 
 .gift:nth-child(2) .gift-box,
-.gift:nth-child(2) .lid { background: #d2aa65; }
+.gift:nth-child(2) .lid {
+  background: linear-gradient(135deg, #f8efdf, #e4d4ba);
+}
+
+/* FROSTED BLUSH */
 
 .gift:nth-child(3) .gift-box,
-.gift:nth-child(3) .lid { background: #315b47; }
+.gift:nth-child(3) .lid {
+  background: linear-gradient(135deg, #f5e5e4, #dfc6c5);
+}
+
+/* CHAMPAGNE */
 
 .gift:nth-child(4) .gift-box,
-.gift:nth-child(4) .lid { background: #a85c39; }
+.gift:nth-child(4) .lid {
+  background: linear-gradient(135deg, #eee2c9, #d3bd96);
+}
+
+/* FROSTED SAGE */
 
 .gift:nth-child(5) .gift-box,
-.gift:nth-child(5) .lid { background: #72537e; }
+.gift:nth-child(5) .lid {
+  background: linear-gradient(135deg, #dce6d9, #adbfac);
+}
+
+/* PRESENT LABELS */
 
 .gift-label {
   position: absolute;
@@ -184,24 +261,30 @@ header p {
   width: 100%;
   text-align: center;
   font-size: 14px;
-  color: #f4dfbd;
+  color: #a28d6e;
   white-space: nowrap;
+  letter-spacing: 1px;
 }
+
+/* FOOTER */
 
 footer {
   text-align: center;
   padding: 20px;
-  color: #bca98e;
+  color: #ad9a7e;
   letter-spacing: 2px;
   font-size: 13px;
+  position: relative;
+  z-index: 1;
 }
 
-/* MODAL */
+/* MODAL OVERLAY */
 
 .overlay {
   position: fixed;
   inset: 0;
-  background: #061711df;
+  background: #c9c0b2cc;
+  backdrop-filter: blur(7px);
   z-index: 10;
   display: none;
   justify-content: center;
@@ -213,21 +296,30 @@ footer {
   display: flex;
 }
 
+/* PASSWORD WINDOW */
+
 .modal {
-  background: #f4ead9;
-  color: #48382c;
+  background: linear-gradient(145deg, #fffefa, #f2eadd);
+  color: #76634c;
   padding: 40px 30px;
   width: min(100%, 430px);
   text-align: center;
-  border-radius: 5px;
-  box-shadow: 0 15px 70px #0008;
+  border: 1px solid #e5d6bd;
+  border-radius: 8px;
+  box-shadow: 0 15px 70px #75664b33;
   animation: appear .4s ease;
   position: relative;
 }
 
 @keyframes appear {
-  from { opacity: 0; transform: translateY(20px) scale(.95); }
-  to { opacity: 1; transform: translateY(0) scale(1); }
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 .modal-icon {
@@ -249,19 +341,26 @@ footer {
 input {
   width: 100%;
   padding: 13px;
-  background: transparent;
-  border: 1px solid #bca78c;
+  background: #fffdf8;
+  border: 1px solid #d7c5a7;
   text-align: center;
   font-family: inherit;
   font-size: 19px;
   outline: none;
   margin-bottom: 15px;
-  color: #48382c;
+  color: #76634c;
 }
 
+input:focus {
+  border-color: #bda477;
+  box-shadow: 0 0 8px #d8c49b55;
+}
+
+/* BUTTON */
+
 .action {
-  border: none;
-  background: #234b3b;
+  border: 1px solid #c8ae7e;
+  background: linear-gradient(135deg, #d4bf99, #b89b6d);
   color: white;
   padding: 12px 28px;
   cursor: pointer;
@@ -271,8 +370,10 @@ input {
 }
 
 .action:hover {
-  background: #37634e;
+  background: #a98d61;
 }
+
+/* CLOSE BUTTON */
 
 .close {
   position: absolute;
@@ -282,11 +383,13 @@ input {
   background: none;
   font-size: 25px;
   cursor: pointer;
-  color: #705c48;
+  color: #a28c6b;
 }
 
+/* ERROR */
+
 .error {
-  color: #a32e38;
+  color: #b77d7d;
   font-size: 15px;
   min-height: 20px;
 }
@@ -298,9 +401,10 @@ input {
   max-height: 85vh;
   overflow-y: auto;
   padding: 45px;
-  background: #f5ead5;
-  color: #49382b;
-  box-shadow: 0 15px 80px #0009;
+  background: linear-gradient(145deg, #fffdf7, #f3eadb);
+  color: #74604a;
+  border: 1px solid #e5d7c1;
+  box-shadow: 0 15px 80px #75664b44;
   animation: appear .7s ease;
   position: relative;
 }
@@ -311,11 +415,12 @@ input {
   font-weight: normal;
   text-align: center;
   margin: 15px 0 25px;
+  color: #b49a70;
 }
 
 .letter .date {
   text-align: right;
-  color: #947b5d;
+  color: #b19a7b;
   font-style: italic;
 }
 
@@ -330,19 +435,54 @@ input {
   font-size: 32px;
   margin-top: 30px;
   text-align: right;
+  color: #b49a70;
 }
 
+/* MOBILE */
+
 @media(max-width: 500px) {
-  .scene { min-height: 580px; }
-  .tree { top: 90px; font-size: 240px; }
-  .gifts { gap: 9px; bottom: 55px; }
-  .gift { width: 82px; height: 85px; }
-  .gift-box { height: 65px; }
-  .gift-box::before { left: 34px; }
-  .gift-box::after { left: 32px; }
-  .lid { width: 90px; }
-  .bow { left: 31px; }
-  .letter { padding: 35px 23px; }
+  .scene {
+    min-height: 580px;
+  }
+
+  .tree {
+    top: 90px;
+    font-size: 240px;
+  }
+
+  .gifts {
+    gap: 9px;
+    bottom: 55px;
+  }
+
+  .gift {
+    width: 82px;
+    height: 85px;
+  }
+
+  .gift-box {
+    height: 65px;
+  }
+
+  .gift-box::before {
+    left: 34px;
+  }
+
+  .gift-box::after {
+    left: 32px;
+  }
+
+  .lid {
+    width: 90px;
+  }
+
+  .bow {
+    left: 31px;
+  }
+
+  .letter {
+    padding: 35px 23px;
+  }
 }
 </style>
 </head>
