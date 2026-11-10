@@ -11,6 +11,7 @@
   gap: 15px;
   width: min(98%, 850px);
   z-index: 3;
+}
 
 /* GIFT HOVER */
 
@@ -168,45 +169,42 @@
 }
 
 /* MOBILE RESPONSIVENESS */
-
 @media (max-width: 600px) {
-.gifts {
-  width: 98%;
-  gap: 8px;
-  bottom: 65px;
-}
-
-.gift {
-  width: 82px;
-  height: 110px;
-}
-
-  .gift-box {
-    height: 70px;
+  .gifts {
+    width: 100%;
+    gap: 5px;
+    bottom: 65px;
+    flex-wrap: nowrap;
   }
 
-  .gift-box::before {
-    left: 35px;
-  }
-
-  .gift-box::after {
-    left: 33px;
-    top: 22px;
+  .gift {
+    width: 16%;
+    min-width: 0;
+    height: 110px;
   }
 
   .lid {
-    width: 93px;
+    width: calc(100% + 8px);
   }
 
   .bow {
-    left: 29px;
-    font-size: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .gift-box::before {
+    left: calc(50% - 8px);
+  }
+
+  .gift-box::after {
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .gift-label {
-    font-size: 12px;
+    font-size: 11px;
+    letter-spacing: 0;
   }
-}
 
 
 
