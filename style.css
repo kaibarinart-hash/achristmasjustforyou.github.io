@@ -1,574 +1,203 @@
 
-/* ==========================================
-   WARM STORYBOOK LOG CABIN THEME
-========================================== */
-
-body {
-  background: #211710;
-  color: #f5e8d5;
-  font-family: 'Cormorant Garamond', serif;
-}
-
-.cabin {
-  background:
-    radial-gradient(
-      ellipse at 50% 65%,
-      #936849 0%,
-      #62432f 45%,
-      #352419 100%
-    );
-}
-
-/* ==========================================
-   WARM WOODEN LOG WALLS
-========================================== */
-
-.log-wall {
-  background:
-    repeating-linear-gradient(
-      0deg,
-      transparent 0px,
-      transparent 54px,
-      #3b2418 57px,
-      #795438 61px,
-      #563923 66px,
-      transparent 72px
-    ),
-    repeating-linear-gradient(
-      90deg,
-      #805a3d,
-      #a07853 45px,
-      #65432d 90px,
-      #8c6243 150px
-    );
-
-  box-shadow:
-    inset 0 -30px 50px #1c100a,
-    inset 0 0 60px #21130c;
-}
-
-.log-wall::after {
-  background: linear-gradient(
-    90deg,
-    #21130b99,
-    transparent 30%,
-    #21130b55
-  );
-}
-
-/* ==========================================
-   WOODEN FLOOR
-========================================== */
-
-.cabin-floor {
-  background:
-    repeating-linear-gradient(
-      90deg,
-      transparent 0px,
-      transparent 110px,
-      #422a1a 113px,
-      transparent 117px
-    ),
-    repeating-linear-gradient(
-      0deg,
-      #795337,
-      #a77a51 35px,
-      #68442d 70px
-    );
-
-  border-top: 10px solid #49301f;
-}
-
-/* ==========================================
-   SNOWY CABIN WINDOW
-========================================== */
-
-.cabin-window {
-  border-color: #704a30;
-  outline-color: #3b2619;
-
-  background:
-    linear-gradient(
-      #172d48,
-      #526e85 55%,
-      #b5c7ca 100%
-    );
-
-  box-shadow:
-    0 0 40px #f5c98755,
-    inset 0 0 35px #e4edf0;
-}
-
-.cabin-window::before,
-.cabin-window::after {
-  background: #704a30;
-}
-
-.moon {
-  background: #fff0c9;
-  box-shadow:
-    0 0 20px #fff0c9,
-    0 0 45px #fff0c966;
-}
-
-.window-snow {
-  background: #f1eee5;
-}
-
-/* ==========================================
-   COZY FIREPLACE
-========================================== */
-
-.fireplace {
-  background: #795038;
-  border-color: #49301e;
-
-  box-shadow:
-    0 0 35px #ff9b3d33,
-    0 0 70px #ff9b3d15;
-}
-
-.mantel {
-  background: linear-gradient(
-    180deg,
-    #b18156,
-    #795034
-  );
-
-  border-color: #543722;
-}
-
-.fireplace-opening {
-  background: #160c07;
-  box-shadow: inset 0 0 20px #000;
-}
-
-.flame-one {
-  background: linear-gradient(
-    #fff2a6,
-    #ffb347,
-    #e65a20
-  );
-}
-
-.flame-two {
-  background: linear-gradient(
-    #fff8c9,
-    #ffcc62,
-    #ed6727
-  );
-}
-
-.flame-three {
-  background: linear-gradient(
-    #fff1a3,
-    #ff9b35,
-    #d84919
-  );
-}
-
-.logs {
-  background: #805337;
-  box-shadow: 0 8px #422719;
-}
-
-/* ==========================================
-   SOFTER FOREST GREEN CHRISTMAS TREE
-========================================== */
-
-.tree-tier {
-  background: linear-gradient(
-    110deg,
-    #23452f,
-    #396847 40%,
-    #285438 75%,
-    #193b29
-  );
-}
-
-/* Warm champagne tree star */
-
-.tree-star {
-  color: #ffe5a6;
-
-  text-shadow:
-    0 0 15px #ffe4a0,
-    0 0 40px #ffca70;
-}
-
-/* Warm white fairy lights */
-
-.tree-lights span {
-  background: #fff0bd;
-
-  box-shadow:
-    0 0 10px 4px #ffe8ad88;
-}
-
-@keyframes twinkle {
-  from {
-    opacity: .4;
-  }
-
-  to {
-    opacity: 1;
-    box-shadow: 0 0 16px 7px #ffe8adaa;
-  }
-}
-
-/* Soft Christmas ornaments */
-
-.ornaments span {
-  background: radial-gradient(
-    circle at 30% 25%,
-    #fff,
-    #d98b91 35%,
-    #9e5158
-  );
-}
-
-.ornaments span:nth-child(2),
-.ornaments span:nth-child(4),
-.ornaments span:nth-child(6) {
-  background: radial-gradient(
-    circle at 30% 25%,
-    #fff,
-    #e9d4a5 35%,
-    #a98951
-  );
-}
-
-.ornaments span:nth-child(3),
-.ornaments span:nth-child(8) {
-  background: radial-gradient(
-    circle at 30% 25%,
-    #fff,
-    #d9b6c4 35%,
-    #a47789
-  );
-}
-
-/* ==========================================
-   PERSONALIZED CHRISTMAS PRESENTS
-========================================== */
+/* FIVE CHRISTMAS PRESENTS */
 
 .gifts {
+  position: absolute;
+  bottom: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  flex-wrap: wrap;
   gap: 22px;
   width: min(95%, 750px);
-  bottom: 55px;
+  z-index: 3;
 }
-
-/* Individual presents */
 
 .gift {
   width: 110px;
   height: 125px;
-  transition:
-    transform .35s ease,
-    filter .35s ease;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  background: transparent;
+  transition: transform .35s ease, filter .35s ease;
 }
 
 .gift:hover {
   transform: translateY(-14px) rotate(-3deg);
-  filter: drop-shadow(0 12px 15px #0007);
+  filter: drop-shadow(0 10px 12px #0005);
 }
 
-/* Box ribbon */
+/* GIFT BOX */
+
+.gift-box {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 85px;
+  border-radius: 3px;
+  box-shadow: 0 8px 15px #0004;
+}
+
+/* GOLD VERTICAL RIBBON */
 
 .gift-box::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 100%;
+  left: 47px;
   background: linear-gradient(
     90deg,
-    #f0dcb9,
-    #fff0d4,
-    #e2c69c
+    #c59a4e,
+    #f8df9c,
+    #c59a4e
   );
 }
 
-/* Decorative star */
+/* SMALL GOLD STAR */
 
 .gift-box::after {
-  color: #fff8e9;
+  content: "✦";
+  position: absolute;
+  top: 29px;
+  left: 45px;
+  font-size: 20px;
+  color: #fff3d2;
 }
 
-/* Lids */
+/* GIFT LID */
 
 .lid {
-  border-radius: 4px;
-  box-shadow: 0 3px 6px #0002;
+  position: absolute;
+  top: 25px;
+  left: -5px;
+  width: 120px;
+  height: 22px;
+  border-radius: 3px;
+  z-index: 2;
 }
 
-/* Bows */
+/* BOW */
 
 .bow {
-  color: #f6e6c9;
-  filter: drop-shadow(0 2px 3px #0004);
+  position: absolute;
+  top: 1px;
+  left: 40px;
+  z-index: 3;
+  font-size: 29px;
+  color: #f5d58e;
+  filter: drop-shadow(0 2px 2px #0003);
 }
 
-/* 1. PEACHY - DODGER BLUE */
+/* 1. DODGER BLUE */
 
 .gift:nth-child(1) .gift-box,
 .gift:nth-child(1) .lid {
   background: linear-gradient(
     135deg,
-    #50a4f5,
-    #1e73ce
+    #2196f3,
+    #1474cf
   );
 }
 
-/* 2. LIGHT - DARKER PINK */
+/* 2. BABY PINK */
 
 .gift:nth-child(2) .gift-box,
 .gift:nth-child(2) .lid {
   background: linear-gradient(
     135deg,
-    #d86b91,
-    #ad3e68
+    #f8c8d8,
+    #efa8c0
   );
 }
 
-/* 3. YADIRA - BABY PINK */
+/* 3. MAGENTA */
 
 .gift:nth-child(3) .gift-box,
 .gift:nth-child(3) .lid {
   background: linear-gradient(
     135deg,
-    #ffd5e4,
-    #efaac4
+    #d41478,
+    #a90b5b
   );
 }
 
-/* 4. INKY - WARM BEIGE */
+/* 4. BEIGE */
 
 .gift:nth-child(4) .gift-box,
 .gift:nth-child(4) .lid {
   background: linear-gradient(
     135deg,
-    #e9d5b5,
-    #c5a77e
+    #e6d1ad,
+    #cbb18a
   );
 }
 
-/* 5. ALE - LIGHT GREEN */
+/* 5. GREEN */
 
 .gift:nth-child(5) .gift-box,
 .gift:nth-child(5) .lid {
   background: linear-gradient(
     135deg,
-    #b4d6a5,
-    #80ad79
+    #477b58,
+    #28563b
   );
 }
 
-/* Gift names */
+/* LABELS UNDER PRESENTS */
 
 .gift-label {
-  color: #fff0d9;
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  width: 100%;
+  text-align: center;
   font-family: 'Cormorant Garamond', serif;
-  font-size: 17px;
-  font-weight: 600;
-  letter-spacing: 1.5px;
-  text-shadow: 0 2px 5px #21140c;
+  font-size: 15px;
+  color: #f5e8d1;
+  white-space: nowrap;
+  letter-spacing: 1px;
 }
 
-/* ==========================================
-   WARM CABIN LIGHTING
-========================================== */
-
-.cabin-light {
-  background: radial-gradient(
-    ellipse at 50% 60%,
-    #ffc47733,
-    transparent 65%
-  );
-}
-
-/* ==========================================
-   SNOW
-========================================== */
-
-.snow {
-  opacity: .7;
-}
-
-/* ==========================================
-   MOBILE RESPONSIVENESS
-========================================== */
+/* MOBILE RESPONSIVENESS */
 
 @media (max-width: 600px) {
-
-  .cabin {
-    min-height: 850px;
-  }
-
-  .tree-area {
-    transform: translateX(-50%) scale(.76);
-    transform-origin: bottom center;
-    bottom: 80px;
-  }
-
-  .cabin-window {
-    width: 125px;
-    height: 160px;
-    top: 40px;
-    right: 5%;
-  }
-
-  .fireplace {
-    transform: scale(.7);
-    transform-origin: bottom left;
-    left: 0;
-    bottom: 100px;
-  }
-
   .gifts {
-    gap: 12px;
     width: 95%;
+    gap: 12px;
+    bottom: 65px;
+  }
+
+  .gift {
+    width: 85px;
+    height: 110px;
+  }
+
+  .gift-box {
+    height: 70px;
+  }
+
+  .gift-box::before {
+    left: 35px;
+  }
+
+  .gift-box::after {
+    left: 33px;
+    top: 22px;
+  }
+
+  .lid {
+    width: 93px;
+  }
+
+  .bow {
+    left: 29px;
+    font-size: 25px;
   }
 
   .gift-label {
-    font-size: 15px;
+    font-size: 12px;
   }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .tree-tier,
-  .tree-star,
-  .tree-lights span,
-  .flame,
-  .snow,
-  .cabin-light,
-  .window-glow {
-    animation: none !important;
-  }
-}
-
-/* ==========================================
-   CABIN FOUNDATION
-========================================== */
-
-.cabin {
-  position: relative;
-  width: 100%;
-  min-height: 850px;
-  overflow: hidden;
-  isolation: isolate;
-}
-
-.log-wall {
-  position: absolute;
-  inset: 0 0 180px;
-  z-index: -1;
-}
-
-.cabin-floor {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 180px;
-  z-index: 1;
-}
-
-.cabin-window {
-  position: absolute;
-  top: 60px;
-  right: 12%;
-  width: 190px;
-  height: 240px;
-  border: 12px solid;
-  z-index: 2;
-}
-
-.fireplace {
-  position: absolute;
-  bottom: 180px;
-  left: 7%;
-  width: 230px;
-  height: 250px;
-  border: 12px solid;
-  z-index: 2;
-}
-
-.tree-area {
-  position: absolute;
-  bottom: 150px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 500px;
-  height: 600px;
-  z-index: 3;
-}
-
-.gifts {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  flex-wrap: wrap;
-  z-index: 5;
-}
-
-.cabin-light,
-.snow {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-}
-
-.cabin-light {
-  z-index: 6;
-}
-
-.snow {
-  z-index: 7;
-}
-
-
-/* TREE AREA */
-.tree-area {
-    position: absolute;
-    left: 50%;
-    bottom: 60px;
-    transform: translateX(-50%);
-    width: 340px;
-    height: 480px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    z-index: 3;
-}
-
-/* CHRISTMAS TREE */
-.christmas-tree {
-    position: absolute;
-    bottom: 110px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 280px;
-    height: 340px;
-}
-
-/* TREE LAYERS */
-.tree-tier {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 0;
-    border-left: solid transparent;
-    border-right: solid transparent;
-    border-bottom: solid #244d38;
-}
-
-.tree-trunk {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 45px;
-    height: 65px;
-    background: #70452e;
 }
