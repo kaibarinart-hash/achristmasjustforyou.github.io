@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,11 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Merry Christmas!</title>
 
-    <style>
-  /* Your existing internal CSS */
-</style>
-
-<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
 
 <style>
 * {
@@ -354,9 +351,16 @@ input {
 
 <header>
   <div class="subtitle">A little something for you</div>
-  <h1>Merry Christmas!</h1>
-  <p>Season's greetings from Kay.</p>
+  <h1>Merry Christmas ♡</h1>
+  <p>Some gifts are meant to be opened with a little love.</p>
 </header>
+
+<main class="scene">
+  <div class="star">✦</div>
+  <div class="tree">🎄</div>
+
+  <div class="gifts" id="gifts"></div>
+</main>
 
 <footer>
   MADE WITH LOVE · CHRISTMAS 2026
@@ -387,75 +391,7 @@ input {
   </div>
 </div>
 
-  
-<main class="cabin">
-
-  <!-- LOG CABIN WALLS -->
-  <div class="log-wall"></div>
-
-  <!-- SNOWY WINDOW -->
-  <div class="cabin-window">
-    <div class="window-snow"></div>
-    <div class="moon"></div>
-    <div class="window-cross"></div>
-    <div class="window-glow"></div>
-  </div>
-
-  <!-- FIREPLACE -->
-  <div class="fireplace">
-    <div class="mantel"></div>
-    <div class="fireplace-opening">
-      <div class="flame flame-one"></div>
-      <div class="flame flame-two"></div>
-      <div class="flame flame-three"></div>
-      <div class="logs"></div>
-    </div>
-  </div>
-
-  <!-- CHRISTMAS TREE -->
-  <div class="tree-area">
-
-    <div class="tree-star">✦</div>
-
-    <div class="christmas-tree">
-      <div class="tree-tier tier-one"></div>
-      <div class="tree-tier tier-two"></div>
-      <div class="tree-tier tier-three"></div>
-      <div class="tree-trunk"></div>
-
-      <!-- TREE LIGHTS -->
-      <div class="tree-lights">
-        <span>●</span><span>●</span><span>●</span>
-        <span>●</span><span>●</span><span>●</span>
-        <span>●</span><span>●</span><span>●</span>
-        <span>●</span><span>●</span><span>●</span>
-      </div>
-
-      <!-- ORNAMENTS -->
-      <div class="ornaments">
-        <span>●</span><span>●</span><span>●</span>
-        <span>●</span><span>●</span><span>●</span>
-        <span>●</span><span>●</span><span>●</span>
-      </div>
-    </div>
-
-    <!-- YOUR FIVE GIFTS -->
-    <div class="gifts" id="gifts"></div>
-
-  </div>
-
-  <!-- WOODEN FLOOR -->
-  <div class="cabin-floor"></div>
-
-  <!-- SNOW -->
-  <div class="snow"></div>
-
-  <!-- WARM LIGHT OVERLAY -->
-  <div class="cabin-light"></div>
-
-</main>
-
-    <script>
+<script>
 
 // ======================================
 // PERSONALIZE YOUR GIFTS HERE
@@ -537,6 +473,7 @@ gifts.forEach((gift, index) => {
   const button = document.createElement("button");
   button.className = "gift";
   button.innerHTML = `
+    <span class="bow">🎀</span>
     <span class="lid"></span>
     <span class="gift-box"></span>
     <span class="gift-label">${gift.name}</span>
@@ -615,6 +552,6 @@ document.getElementById("password").addEventListener(
 );
 
 </script>
-    
+
 </body>
 </html>
