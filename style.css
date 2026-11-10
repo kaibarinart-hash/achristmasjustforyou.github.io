@@ -209,3 +209,8 @@
     font-size: 12px;
   }
 }
+
+
+body {
+  background: hotpink !important;
+}
