@@ -60,7 +60,7 @@ Your fourth letter goes here.`,
     signature: "Yours ♡"
   },
 
-  {
+    {
     name: "Ale",
     password: "carolz",
     title: "One last little surprise",
@@ -68,13 +68,20 @@ Your fourth letter goes here.`,
     message: `Dear you,
 
 Your final letter goes here.`,
-    signature: "Merry Christmas ♡"
-  }
+    signature: "Merry Christmas!"
+  },
+  {
     name: "MK",
-  password: "starlight",
-  title: "A little extra something ♡",
-  date: "December 25, 2026",
-  message: `Dear you,
+    password: "YOUR_PASSWORD",
+    title: "A little something for MK ♡",
+    date: "December 25, 2026",
+    message: `Dear MK,
+
+Write your special letter here!
+
+With love.`,
+    signature: "Merry Christmas! ♡"
+  }
 ];
 
 let selectedGift = null;
