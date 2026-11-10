@@ -5,7 +5,7 @@
 const gifts = [
   {
     name: "Peachy",
-    password: "1234",
+    password: "mistletoe",
     title: "A little reminder ♡",
     date: "December 25, 2026",
     message: `Dear you,
@@ -21,7 +21,7 @@ With love.`,
 
   {
     name: "Light",
-    password: "memory",
+    password: "spirit",
     title: "Remember when...",
     date: "December 25, 2026",
     message: `Dear you,
@@ -37,7 +37,7 @@ I hope this makes you smile.`,
 
   {
     name: "Yadira",
-    password: "love",
+    password: "serenity",
     title: "Something I want you to know",
     date: "December 25, 2026",
     message: `Dear you,
@@ -51,7 +51,7 @@ you want to say.`,
 
   {
     name: "Inky",
-    password: "gift4",
+    password: "wonder",
     title: "Just because...",
     date: "December 25, 2026",
     message: `Dear you,
@@ -62,7 +62,7 @@ Your fourth letter goes here.`,
 
   {
     name: "Ale",
-    password: "gift5",
+    password: "carolz",
     title: "One last little surprise",
     date: "December 25, 2026",
     message: `Dear you,
