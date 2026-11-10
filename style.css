@@ -485,3 +485,19 @@ body::after {
   }
 }
 
+.scene {
+  min-height: 620px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.gifts {
+  position: absolute;
+  bottom: 35px;
+  z-index: 7;
+}
