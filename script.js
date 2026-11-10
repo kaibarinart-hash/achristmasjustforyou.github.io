@@ -70,6 +70,11 @@ Your fourth letter goes here.`,
 Your final letter goes here.`,
     signature: "Merry Christmas ♡"
   }
+    name: "MK",
+  password: "starlight",
+  title: "A little extra something ♡",
+  date: "December 25, 2026",
+  message: `Dear you,
 ];
 
 let selectedGift = null;
