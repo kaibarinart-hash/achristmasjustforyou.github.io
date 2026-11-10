@@ -506,6 +506,3 @@ body::after {
   top: 12px;
   transform: translateX(-50%);
 }
-.tree {
-  outline: 3px solid red !important;
-}
