@@ -1,1 +1,204 @@
 
+/* FIVE CHRISTMAS PRESENTS */
+
+.gifts {
+  position: absolute;
+  bottom: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  flex-wrap: wrap;
+  gap: 22px;
+  width: min(95%, 750px);
+  z-index: 3;
+}
+
+.gift {
+  width: 110px;
+  height: 125px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  background: transparent;
+  transition: transform .35s ease, filter .35s ease;
+}
+
+.gift:hover {
+  transform: translateY(-14px) rotate(-3deg);
+  filter: drop-shadow(0 10px 12px #0005);
+}
+
+/* GIFT BOX */
+
+.gift-box {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 85px;
+  border-radius: 3px;
+  box-shadow: 0 8px 15px #0004;
+}
+
+/* GOLD VERTICAL RIBBON */
+
+.gift-box::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 100%;
+  left: 47px;
+  background: linear-gradient(
+    90deg,
+    #c59a4e,
+    #f8df9c,
+    #c59a4e
+  );
+}
+
+/* SMALL GOLD STAR */
+
+.gift-box::after {
+  content: "✦";
+  position: absolute;
+  top: 29px;
+  left: 45px;
+  font-size: 20px;
+  color: #fff3d2;
+}
+
+/* GIFT LID */
+
+.lid {
+  position: absolute;
+  top: 25px;
+  left: -5px;
+  width: 120px;
+  height: 22px;
+  border-radius: 3px;
+  z-index: 2;
+}
+
+/* BOW */
+
+.bow {
+  position: absolute;
+  top: 1px;
+  left: 40px;
+  z-index: 3;
+  font-size: 29px;
+  color: #f5d58e;
+  filter: drop-shadow(0 2px 2px #0003);
+}
+
+/* 1. DODGER BLUE */
+
+.gift:nth-child(1) .gift-box,
+.gift:nth-child(1) .lid {
+  background: linear-gradient(
+    135deg,
+    #2196f3,
+    #1474cf
+  );
+}
+
+/* 2. BABY PINK */
+
+.gift:nth-child(2) .gift-box,
+.gift:nth-child(2) .lid {
+  background: linear-gradient(
+    135deg,
+    #f8c8d8,
+    #efa8c0
+  );
+}
+
+/* 3. MAGENTA */
+
+.gift:nth-child(3) .gift-box,
+.gift:nth-child(3) .lid {
+  background: linear-gradient(
+    135deg,
+    #d41478,
+    #a90b5b
+  );
+}
+
+/* 4. BEIGE */
+
+.gift:nth-child(4) .gift-box,
+.gift:nth-child(4) .lid {
+  background: linear-gradient(
+    135deg,
+    #e6d1ad,
+    #cbb18a
+  );
+}
+
+/* 5. GREEN */
+
+.gift:nth-child(5) .gift-box,
+.gift:nth-child(5) .lid {
+  background: linear-gradient(
+    135deg,
+    #477b58,
+    #28563b
+  );
+}
+
+/* LABELS UNDER PRESENTS */
+
+.gift-label {
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px;
+  color: #f5e8d1;
+  white-space: nowrap;
+  letter-spacing: 1px;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 600px) {
+  .gifts {
+    width: 95%;
+    gap: 12px;
+    bottom: 65px;
+  }
+
+  .gift {
+    width: 85px;
+    height: 110px;
+  }
+
+  .gift-box {
+    height: 70px;
+  }
+
+  .gift-box::before {
+    left: 35px;
+  }
+
+  .gift-box::after {
+    left: 33px;
+    top: 22px;
+  }
+
+  .lid {
+    width: 93px;
+  }
+
+  .bow {
+    left: 29px;
+    font-size: 25px;
+  }
+
+  .gift-label {
+    font-size: 12px;
+  }
+}
+
