@@ -1,5 +1,5 @@
 
-/* FIVE CHRISTMAS PRESENTS */
+/* FIVE COZY WHITE CHRISTMAS PRESENTS */
 
 .gifts {
   position: absolute;
@@ -13,6 +13,8 @@
   z-index: 3;
 }
 
+/* GIFT HOVER */
+
 .gift {
   width: 110px;
   height: 125px;
@@ -20,12 +22,12 @@
   cursor: pointer;
   position: relative;
   background: transparent;
-  transition: transform .35s ease, filter .35s ease;
+  transition: transform .4s ease, filter .4s ease;
 }
 
 .gift:hover {
   transform: translateY(-14px) rotate(-3deg);
-  filter: drop-shadow(0 10px 12px #0005);
+  filter: drop-shadow(0 10px 14px #b9a98d66);
 }
 
 /* GIFT BOX */
@@ -36,11 +38,13 @@
   left: 0;
   width: 100%;
   height: 85px;
-  border-radius: 3px;
-  box-shadow: 0 8px 15px #0004;
+  border-radius: 4px;
+  box-shadow:
+    0 8px 18px #76664b22,
+    inset 0 1px 5px #ffffff88;
 }
 
-/* GOLD VERTICAL RIBBON */
+/* CHAMPAGNE GOLD RIBBON */
 
 .gift-box::before {
   content: "";
@@ -50,21 +54,23 @@
   left: 47px;
   background: linear-gradient(
     90deg,
-    #c59a4e,
-    #f8df9c,
-    #c59a4e
+    #c9ae7d,
+    #f9edce,
+    #d6bd91
   );
+  box-shadow: 0 0 5px #fff8;
 }
 
-/* SMALL GOLD STAR */
+/* LITTLE CHRISTMAS STAR */
 
 .gift-box::after {
-  content: "✦";
+  content: "✧";
   position: absolute;
-  top: 29px;
+  top: 27px;
   left: 45px;
-  font-size: 20px;
-  color: #fff3d2;
+  font-size: 22px;
+  color: #fffdf4;
+  text-shadow: 0 1px 5px #b69c6a88;
 }
 
 /* GIFT LID */
@@ -75,11 +81,12 @@
   left: -5px;
   width: 120px;
   height: 22px;
-  border-radius: 3px;
+  border-radius: 4px;
   z-index: 2;
+  box-shadow: 0 3px 7px #74634a22;
 }
 
-/* BOW */
+/* SOFT GOLD BOW */
 
 .bow {
   position: absolute;
@@ -87,62 +94,62 @@
   left: 40px;
   z-index: 3;
   font-size: 29px;
-  color: #f5d58e;
-  filter: drop-shadow(0 2px 2px #0003);
+  color: #d9bd86;
+  filter: drop-shadow(0 2px 3px #8e795333);
 }
 
-/* 1. DODGER BLUE */
+/* 1. PEARL WHITE */
 
 .gift:nth-child(1) .gift-box,
 .gift:nth-child(1) .lid {
   background: linear-gradient(
     135deg,
-    #2196f3,
-    #1474cf
+    #fffefa,
+    #e9e3d8
   );
 }
 
-/* 2. BABY PINK */
+/* 2. WINTER IVORY */
 
 .gift:nth-child(2) .gift-box,
 .gift:nth-child(2) .lid {
   background: linear-gradient(
     135deg,
-    #f8c8d8,
-    #efa8c0
+    #f7efdf,
+    #e5d6bd
   );
 }
 
-/* 3. MAGENTA */
+/* 3. FROSTED BLUSH */
 
 .gift:nth-child(3) .gift-box,
 .gift:nth-child(3) .lid {
   background: linear-gradient(
     135deg,
-    #d41478,
-    #a90b5b
+    #f4e4e4,
+    #dfc6c4
   );
 }
 
-/* 4. BEIGE */
+/* 4. CHAMPAGNE GOLD */
 
 .gift:nth-child(4) .gift-box,
 .gift:nth-child(4) .lid {
   background: linear-gradient(
     135deg,
-    #e6d1ad,
-    #cbb18a
+    #eee1c6,
+    #d4bd94
   );
 }
 
-/* 5. GREEN */
+/* 5. FROSTED SAGE */
 
 .gift:nth-child(5) .gift-box,
 .gift:nth-child(5) .lid {
   background: linear-gradient(
     135deg,
-    #477b58,
-    #28563b
+    #dce5d9,
+    #aebfad
   );
 }
 
@@ -156,9 +163,10 @@
   text-align: center;
   font-family: 'Cormorant Garamond', serif;
   font-size: 15px;
-  color: #f5e8d1;
+  color: #f8f1e5;
   white-space: nowrap;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
+  text-shadow: 0 1px 5px #78694e55;
 }
 
 /* MOBILE RESPONSIVENESS */
