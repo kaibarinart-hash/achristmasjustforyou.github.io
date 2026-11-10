@@ -1,5 +1,5 @@
 
-/* FIVE COZY WHITE CHRISTMAS PRESENTS */
+/* SIX COZY WHITE CHRISTMAS PRESENTS */
 
 .gifts {
   position: absolute;
@@ -8,10 +8,9 @@
   justify-content: center;
   align-items: end;
   flex-wrap: wrap;
-  gap: 22px;
-  width: min(95%, 750px);
+  gap: 15px;
+  width: min(98%, 850px);
   z-index: 3;
-}
 
 /* GIFT HOVER */
 
@@ -141,6 +140,17 @@
   );
 }
 
+  /* 6. FROSTED WINTER BLUE */
+
+.gift:nth-child(6) .gift-box,
+.gift:nth-child(6) .lid {
+  background: linear-gradient(
+    135deg,
+    #e4edf2,
+    #bdcdd8
+  );
+}
+
 /* LABELS UNDER PRESENTS */
 
 .gift-label {
@@ -160,16 +170,16 @@
 /* MOBILE RESPONSIVENESS */
 
 @media (max-width: 600px) {
-  .gifts {
-    width: 95%;
-    gap: 12px;
-    bottom: 65px;
-  }
+.gifts {
+  width: 98%;
+  gap: 8px;
+  bottom: 65px;
+}
 
-  .gift {
-    width: 85px;
-    height: 110px;
-  }
+.gift {
+  width: 82px;
+  height: 110px;
+}
 
   .gift-box {
     height: 70px;
@@ -256,6 +266,9 @@ body::after {
   animation-delay: 2s;
 }
 
+.gift:nth-child(6) {
+  animation-delay: 2.5s;
+}
 @keyframes giftFloat {
   0%, 100% {
     translate: 0 0;
