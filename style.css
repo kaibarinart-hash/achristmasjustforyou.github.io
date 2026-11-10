@@ -497,12 +497,3 @@ body::after {
   z-index: 1;
   overflow: hidden;
 }
-
-/* PREVENT TREE DUPLICATION */
-.scene > .tree {
-  display: block;
-  position: absolute;
-  left: 50%;
-  top: 12px;
-  transform: translateX(-50%);
-}
