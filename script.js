@@ -212,3 +212,10 @@ document.getElementById("letterModal")
       closeLetter();
     }
   });
+
+
+console.log("Number of trees:", document.querySelectorAll(".tree").length);
+
+document.querySelectorAll(".tree").forEach((tree, index) => {
+  console.log("Tree", index + 1, tree);
+});
