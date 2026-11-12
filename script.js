@@ -55,14 +55,28 @@ Your fourth letter goes here.`,
 Your final letter goes here.`,
     signature: "Merry Christmas ♡"
   },
-  {
-    name: "MK",
-    password: "starlight",
-    title: "A little extra something ♡",
+  
+  signature: "Merry Christmas!"
+  }
+    {
+    name: "Kris",
+    password: "hithere",
+    title: "A little surprise for Kris",
     date: "December 25, 2026",
-    message: `Dear you,
+    message: `Dear Kris,
 
-Your extra letter goes here.`,
+Write your letter here.`,
+    signature: "With love ♡"
+  },
+
+      {
+    name: "MK",
+    password: "falala",
+    title: "A little surprise for MK",
+    date: "December 25, 2026",
+    message: `Dear MK,
+
+Write your letter here.`,
     signature: "With love ♡"
   }
 ];
