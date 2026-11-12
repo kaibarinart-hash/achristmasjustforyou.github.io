@@ -19,6 +19,19 @@
   object-fit: contain;
 }
 
+
+
+.scene {
+  min-height: 620px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 1;
+}
+
+
 /* FIVE COZY WHITE CHRISTMAS PRESENTS */
 
 .gifts {
