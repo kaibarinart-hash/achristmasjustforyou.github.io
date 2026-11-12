@@ -126,8 +126,8 @@
 .gift:nth-child(1) .lid {
   background: linear-gradient(
     135deg,
-    #fffefa,
-    #e9e3d8
+    #e1e8f0, 
+    #b9c9d8
   );
 }
 
@@ -170,9 +170,21 @@
 .gift:nth-child(5) .lid {
   background: linear-gradient(
     135deg,
-    #dce5d9,
-    #aebfad
+     #fffefa,
+    #e9e3d8
   );
+
+  /* Kris */
+  .gift:nth-child(6) .gift-box,
+.gift:nth-child(6) .lid {
+  background: linear-gradient(135deg, #fffefa, #e8e1d6);
+}
+
+/* Idk */
+.gift:nth-child(7) .gift-box,
+.gift:nth-child(7) .lid {
+  background: linear-gradient(135deg, #eadcf0, #c8b3d3);
+}
 }
 
 /* LABELS UNDER PRESENTS */
