@@ -1,3 +1,18 @@
+.tree {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(80%, 350px);
+  z-index: 1;
+}
+
+.tree img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
 
 /* FIVE COZY WHITE CHRISTMAS PRESENTS */
 
