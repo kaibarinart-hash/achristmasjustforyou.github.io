@@ -12,13 +12,9 @@ const gifts = [
 
 Write your first personal letter here.
 
-You can make this as long as you like.
-Every word will appear inside this little present.
-
 With love.`,
     signature: "Always yours ♡"
   },
-
   {
     name: "Light",
     password: "spirit",
@@ -26,15 +22,9 @@ With love.`,
     date: "December 25, 2026",
     message: `Dear you,
 
-Write your second letter here.
-
-Maybe a favorite memory, a story, or
-something you want them to remember.
-
-I hope this makes you smile.`,
+Write your second letter here.`,
     signature: "With love ♡"
   },
-
   {
     name: "Yadira",
     password: "serenity",
@@ -42,13 +32,9 @@ I hope this makes you smile.`,
     date: "December 25, 2026",
     message: `Dear you,
 
-Write your third letter here.
-
-This space is yours to fill with anything
-you want to say.`,
+Write your third letter here.`,
     signature: "Forever ♡"
   },
-
   {
     name: "Inky",
     password: "wonder",
@@ -59,7 +45,6 @@ you want to say.`,
 Your fourth letter goes here.`,
     signature: "Yours ♡"
   },
-
   {
     name: "Ale",
     password: "carolz",
@@ -69,12 +54,17 @@ Your fourth letter goes here.`,
 
 Your final letter goes here.`,
     signature: "Merry Christmas ♡"
-  }
+  },
+  {
     name: "MK",
-  password: "starlight",
-  title: "A little extra something ♡",
-  date: "December 25, 2026",
-  message: `Dear you,
+    password: "starlight",
+    title: "A little extra something ♡",
+    date: "December 25, 2026",
+    message: `Dear you,
+
+Your extra letter goes here.`,
+    signature: "With love ♡"
+  }
 ];
 
 let selectedGift = null;
