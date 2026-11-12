@@ -433,15 +433,22 @@ input:focus {
     min-height: 580px;
   }
 
-  .tree {
-    top: 90px;
-    font-size: 240px;
-  }
+ .tree {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
 
-  .gifts {
-    gap: 9px;
-    bottom: 55px;
-  }
+.tree img {
+  display: block;
+  width: min(250px, 70vw);
+  height: auto;
+}
+
+.gifts {
+  left: 50%;
+  transform: translateX(-50%);
+}
 
   .gift {
     width: 82px;
