@@ -37,10 +37,7 @@
 
 .gifts {
   position: relative;
-bottom: auto;
-margin: 0 auto 30px;
-  position: absolute;
-  bottom: 55px;
+  margin: 0 auto 30px;
   display: flex;
   justify-content: center;
   align-items: end;
@@ -201,8 +198,8 @@ margin: 0 auto 30px;
   .gifts {
     width: 95%;
     gap: 12px;
-    bottom: 65px;
   }
+}
 
   .gift {
     width: 85px;
