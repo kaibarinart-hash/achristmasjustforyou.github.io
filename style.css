@@ -36,6 +36,9 @@
 /* FIVE COZY WHITE CHRISTMAS PRESENTS */
 
 .gifts {
+  position: relative;
+bottom: auto;
+margin: 0 auto 30px;
   position: absolute;
   bottom: 55px;
   display: flex;
