@@ -3,20 +3,17 @@
 // ======================================
 
 const gifts = [
-  {
-    name: "Peachy",
+  {  name: "Peachy",
     password: "mistletoe",
     title: "A little reminder ♡",
     date: "December 25, 2026",
     message: `Dear you,
-
 Write your first personal letter here.
-
 With love.`,
     signature: "Always yours ♡"
   },
-  {
-    name: "Light",
+  
+  {   name: "Light",
     password: "spirit",
     title: "Remember when...",
     date: "December 25, 2026",
@@ -25,8 +22,8 @@ With love.`,
 Write your second letter here.`,
     signature: "With love ♡"
   },
-  {
-    name: "Yadira",
+  
+  {  name: "Yadira",
     password: "serenity",
     title: "Something I want you to know",
     date: "December 25, 2026",
@@ -35,8 +32,8 @@ Write your second letter here.`,
 Write your third letter here.`,
     signature: "Forever ♡"
   },
-  {
-    name: "Inky",
+  
+  {  name: "Inky",
     password: "wonder",
     title: "Just because...",
     date: "December 25, 2026",
@@ -45,32 +42,27 @@ Write your third letter here.`,
 Your fourth letter goes here.`,
     signature: "Yours ♡"
   },
-  {
-    name: "Ale",
+
+  
+  { name: "Ale",
     password: "carolz",
     title: "One last little surprise",
     date: "December 25, 2026",
     message: `Dear you,
-
 Your final letter goes here.`,
     signature: "Merry Christmas ♡"
   },
   
-  signature: "Merry Christmas!"
-  }
-    {
-    name: "Kris",
+   {name: "Kris",
     password: "hithere",
     title: "A little surprise for Kris",
     date: "December 25, 2026",
     message: `Dear Kris,
-
 Write your letter here.`,
     signature: "With love ♡"
   },
 
-      {
-    name: "MK",
+   { name: "MK",
     password: "falala",
     title: "A little surprise for MK",
     date: "December 25, 2026",
